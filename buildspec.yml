@@ -8,7 +8,7 @@ phases:
     commands:
       - echo Build client and backend docker images for testing...
       - docker build -t jeezhou/clientfrontend ./client
-      - docker build -t jeezhou/backend ./backend
+      - docker build -t jeezhou/nginx ./nginx
   # build:
   #   commands:
   #     - echo Build started on `date`
