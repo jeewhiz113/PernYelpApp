@@ -7,7 +7,7 @@ phases:
   pre_build:
     commands:
       - echo Build client and backend docker images for testing...
-      - docker build -t jeezhou/clientFrontEnd ./client
+      - docker build -t jeezhou/clientfrontend ./client
       - docker build -t jeezhou/backend ./backend
   # build:
   #   commands:
