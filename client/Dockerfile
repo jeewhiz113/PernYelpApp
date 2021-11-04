@@ -1,4 +1,5 @@
-FROM node:16 AS build
+ARG REPO=504857465313.dkr.ecr.us-east-2.amazonaws.com/node:16
+FROM ${REPO} AS build
 WORKDIR /app
 COPY package.json .
 RUN npm install
