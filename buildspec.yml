@@ -16,10 +16,12 @@ phases:
     commands:
       - echo logged in and build client front end and nginx
       - docker build -t 504857465313.dkr.ecr.us-east-2.amazonaws.com/node ./client
+      - docker build -t 504857465313.dkr.ecr.us-east-2.amazonaws.com/nginx:latest ./nginx
   post_build:
     commands:
       - echo Pushing the client image to ECR
       - docker push 504857465313.dkr.ecr.us-east-2.amazonaws.com/node
+      - docker push 504857465313.dkr.ecr.us-east-2.amazonaws.com/nginx:latest
       # - docker build -t jeezhou/nginx ./nginx
   #     - echo Build started on `date`
   #     # Run tests with built Docker images
