@@ -1,5 +1,5 @@
-ARG REPO=504857465313.dkr.ecr.us-east-2.amazonaws.com/nginx:latest
-FROM ${REPO}
+
+FROM nginx
 EXPOSE 80
 
 RUN rm /usr/share/nginx/html/*
