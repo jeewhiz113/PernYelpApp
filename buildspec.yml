@@ -24,7 +24,7 @@ phases:
       - docker push 504857465313.dkr.ecr.us-east-2.amazonaws.com/clientimage:latest
       - docker push 504857465313.dkr.ecr.us-east-2.amazonaws.com/nginximage:latest
       - echo Constructing the imageDefintion file for deployment
-      - print '[{"name":"client", "imageUri":"504857465313.dkr.ecr.us-east-2.amazonaws.com/clientimage:latest"}, {"name":"nginx", "imageUri":"504857465313.dkr.ecr.us-east-2.amazonaws.com/nginximage:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"client", "imageUri":"504857465313.dkr.ecr.us-east-2.amazonaws.com/clientimage:latest"}, {"name":"nginx", "imageUri":"504857465313.dkr.ecr.us-east-2.amazonaws.com/nginximage:latest"}]' > imagedefinitions.json
       
 artifacts:
   files:
