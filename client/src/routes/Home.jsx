@@ -9,6 +9,7 @@ function Home() {
       <h3>Check why deleting restaurant does not work?!?!?!?!!</h3>
       <h2>Check to see if the sync is working between the dev files and the react container</h2>
       <h2>Checking ci/cd here!</h2>
+      <h3>Check again?!?!!?</h3>
       <Header/>
       <AddRestaurant/>
       <RestaurantList/>

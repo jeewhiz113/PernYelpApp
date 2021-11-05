@@ -2,7 +2,7 @@
   "containerDefinitions":[
     {
       "name":"nginx",
-      "image": "504857465313.dkr.ecr.us-east-2.amazonaws.com/nginx:latest",
+      "image": "504857465313.dkr.ecr.us-east-2.amazonaws.com/nginximage:latest",
       "hostname":"nginx",
       "essential":true,
       "portMappings":[
@@ -16,7 +16,7 @@
     },
     {
       "name": "client",
-      "image": "504857465313.dkr.ecr.us-east-2.amazonaws.com/node",
+      "image": "504857465313.dkr.ecr.us-east-2.amazonaws.com/clientimage:latest",
       "hostname": "client",
       "essential": false,
       "memory": 100
