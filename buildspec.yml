@@ -23,6 +23,12 @@ phases:
       - echo Pushing the client image to ECR
       - docker push 504857465313.dkr.ecr.us-east-2.amazonaws.com/clientimage:latest
       - docker push 504857465313.dkr.ecr.us-east-2.amazonaws.com/nginximage:latest
+      - echo Constructing the imageDefintion file for deployment
+      - print '[{"name":"client", "imageUri":"504857465313.dkr.ecr.us-east-2.amazonaws.com/clientimage:latest"}, {"name":"nginx", "imageUri":"504857465313.dkr.ecr.us-east-2.amazonaws.com/nginximage:latest"}]' > imagedefinitions.json
+      
+artifacts:
+  files:
+    - imagedefinitions.json
       # - docker build -t jeezhou/nginx ./nginx
   #     - echo Build started on `date`
   #     # Run tests with built Docker images
